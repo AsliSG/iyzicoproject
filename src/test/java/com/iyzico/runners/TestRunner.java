@@ -20,7 +20,7 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome=true, 
 		
 		
-		tags= "",
+		tags= "@Order",
 		
 		plugin = {
 					"pretty",

@@ -41,7 +41,7 @@ public class BaseClass {
 		String url = ConfigsReader.getProperty("url");
 		driver.get(url);
 		
-		//PageInitializer.initialize();
+		PageInitializer.initialize();
 	}
 	
 	public static void tearDown()
