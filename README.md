@@ -50,7 +50,7 @@ Make sure you have the following installed:
 ### Clone the Repository and Run test
 ```bash
 git clone https://github.com/your-username/iyzico-automation-project.git
-cd iyzico-automation-project
+cd iyzicoproject
 mvn test
 
 
@@ -64,7 +64,7 @@ cucumber-default-report.html
 ### Clone the Repository and Run test
 ```bash
 git clone https://github.com/your-username/iyzico-automation-project.git
-cd iyzico-automation-project
+cd iyzicoproject
 
 ##To execute through Eclipse
 Go to File > Import > Existing Maven Projects.
