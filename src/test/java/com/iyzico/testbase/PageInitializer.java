@@ -5,6 +5,7 @@ import com.iyzico.pages.ConfirmationPageElements;
 import com.iyzico.pages.MainPageElements;
 import com.iyzico.pages.PaymentConfirmElements;
 import com.iyzico.pages.PaymentPageElements;
+import com.iyzico.pages.SecurePageElements;
 import com.iyzico.pages.İtemsPageElements;
 
 public class PageInitializer extends BaseClass{
@@ -15,6 +16,7 @@ public class PageInitializer extends BaseClass{
 	public static PaymentPageElements paymentPage;
 	public static PaymentConfirmElements pconfirmPage;
 	public static  ConfirmationPageElements confirmPage;
+	public static SecurePageElements securePage;
 	
 	
 	
@@ -26,6 +28,7 @@ public class PageInitializer extends BaseClass{
 		paymentPage=new PaymentPageElements();
 		pconfirmPage=new PaymentConfirmElements();
 		confirmPage=new  ConfirmationPageElements();
+		securePage =new SecurePageElements();
 	}
 
 }
