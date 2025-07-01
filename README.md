@@ -1,4 +1,4 @@
-# Iyzico Automation Testing Project
+# Iyzico Automation Project
 
 This project is a case study ,end-to-end test automation implementation for the Iyzico Demo Page(https://www.iyzico.com/demo/). The automation verifies the user flow where a customer selects a second  product, proceeds to checkout, enters payment information, and successfully places an order. The test is considered successful when the **"Sipariş Alındı"** ("Order Received") message is displayed.
 
