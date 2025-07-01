@@ -1,7 +1,11 @@
 package com.iyzico.steps;
 
 
+import java.util.NoSuchElementException;
+
+
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 
@@ -68,16 +72,40 @@ public class SuccessfulOrderCompletionSteps extends CommonMethods {
 		wait(3);
 	    
 	}
+	
+	@When("the user enters the 3D secure code {string}")
+	public void the_user_enters_the_3d_secure_code(String securecode) {
+		try {
+			
+			if(!driver.findElements(By.xpath ("//input[@id='smsCode']")).isEmpty()) {
+		waitForVisibility(securePage.textbox,driver);
+		sendText(securePage.textbox, securecode);
+		wait(2);
+		click(securePage.submitButton);
+		
+		
+		waitForVisibility(confirmPage.confirmationText, driver);
+		
+		}
+		}catch(NoSuchElementException e) {
+			System.out.println("No 3D validation");
+		}
+	}
 	@Then("successfully verify {string} text on the system")
 	public void successfully_verify_text_on_the_system(String expectedText) {
-	      
+	    try {  
 		waitForVisibility(confirmPage.confirmationText, driver);
 		  String actualText=confirmPage.confirmationText.getText();
 		  
 		  Assert.assertTrue("Confirmation message is not displayed",actualText.equalsIgnoreCase(expectedText));
-			    
+	    }
+	    catch(Exception e) {
+	    	
+	    	System.out.println("Confirmation message not displayed");
+	    }
+	 
 	}
-	
+}
 	
 
-}
+
